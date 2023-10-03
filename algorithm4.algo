@@ -1,0 +1,26 @@
+ALGORITHM palindrom
+VAR
+    str:STRING;
+    pal : BOOLEAN
+    I : INTEGER 
+BEGIN
+write ("enter element ")
+read(str)
+FOR i FROM 0 TO str.length STEP 1  DO
+pal=true
+        FOR j FROM 0 TO str.length STEP -1  DO
+            IF (str(i) == str(j) THEN
+                pal:=true
+            
+            ELSE
+                pal=false
+            END_IF
+        END_FOR
+    END_FOR
+IF (pal==true) THEN
+    write("palindrom")
+
+ELSE
+    write(" ne pas palindrom")
+END_IF
+
